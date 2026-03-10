@@ -1,0 +1,45 @@
+<section class="hero">
+    <h1>Tout sur la league </h1>
+    <p>Les players, les teams et l'actus des matchs</p>
+</section>
+
+<div class="featured-team">
+    <h2>TEAM A LA UNE</h2>
+    <div class="featured-team__content">
+        <img src="<?= $featuredTeam->getLogo() ?>" class="featured-team__logo" alt="<?= $featuredTeam->getName() ?>">
+        <p class="featured-team__name"><?= $featuredTeam->getName() ?></p>
+        <div class="featured-team__players">
+            <?php foreach ($featuredPlayers as $player) : ?>
+                <div class="player-card">
+                    <img src="<?= $player->getPortrait() ?>" alt="<?= $player->getNickname() ?>">
+                    <p><?= $player->getNickname() ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>
+
+<div class="featured-players">
+    <h2>LES PLAYERS A LA UNE</h2>
+    <div class="featured-players__grid">
+        <?php $highlighted = array_values(array_filter($players, fn($p) => in_array($p->getId(), [3, 14, 12]))); ?>
+        <?php foreach ($highlighted as $player) : ?>
+            <div class="player-card">
+                <img src="<?= $player->getPortrait() ?>" alt="<?= $player->getNickname() ?>">
+                <p class="player-card__nickname"><?= $player->getNickname() ?></p>
+                <p class="player-card__team"><?= $player->getTeamName() ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<div class="last-match">
+    <h2>LE DERNIER MATCH </h2>
+    <h3><?= $game->getName(); ?></h3>
+    <p><?= $game->getDate(); ?></p>
+    <div class="last-match__logos">
+        <img src="<?= $game->getLogo_1() ?>" alt="Team 1">
+        <span class="last-match__vs">VS</span>
+        <img src="<?= $game->getLogo_2() ?>" alt="Team 2">
+    </div>
+</div>

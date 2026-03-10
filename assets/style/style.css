@@ -1,0 +1,354 @@
+:root {
+    --darkerGrey: #0b132b;
+    --darkGrey: #1c2541;
+    --yellow: #d4b52f;
+    --green: #509d77;
+    --pink: #d97ab5;
+    --blue: #45a0ec;
+    --purple: #9e87cb;
+    --red: #d66f75;
+    --grey: #83a1bb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--darkGrey);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align:center;
+}
+
+/* HEADER */
+.site-header {
+    background-color: var(--darkerGrey);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 64px;
+    border-bottom: 2px solid var(--yellow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header__logo {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    color: var(--yellow);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.site-header__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.site-header__nav a {
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.site-header__nav a:hover {
+    color: var(--yellow);
+}
+
+/* ── HERO ───────────────────────────────────────────── */
+.hero {
+    background-image: url('https://bre05.kornog.bzh/resources/home_background_league.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-bottom: 3px solid var(--yellow);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--grey);
+    font-size: 1.1rem;
+}
+
+/* ── SECTIONS COMMUNES ──────────────────────────────── */
+.featured-team,
+.featured-players,
+.last-match {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ── TEAM A LA UNE ──────────────────────────────────── */
+.featured-team__content {
+    background-color: var(--darkerGrey);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.featured-team__logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.featured-team__name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.featured-team__players {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* ── PLAYER CARD ────────────────────────────────────── */
+.player-card {
+    background-color: var(--darkGrey);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    width: 140px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.player-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.player-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    margin-bottom: 0.6rem;
+}
+
+.player-card__nickname {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.player-card__team {
+    color: var(--grey);
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* ── PLAYERS A LA UNE ───────────────────────────────── */
+.featured-players__grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featured-players__grid .player-card {
+    width: 160px;
+}
+
+.featured-players__grid .player-card img {
+    width: 100px;
+    height: 100px;
+}
+
+/* ── DERNIER MATCH ──────────────────────────────────── */
+.last-match {
+    background-color: var(--darkerGrey);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    max-width: 600px;
+}
+
+.last-match h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.last-match p {
+    color: var(--grey);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.last-match__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.last-match__logos img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.last-match__vs {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8rem;
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+/* ── PLAYERS PAGE ───────────────────────────────────── */
+.players-page {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.players-page__title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+}
+
+.players-grid .player-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.players-grid .player-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    margin-bottom: 0.4rem;
+}
+
+.player-card__link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.35rem 1rem;
+    background-color: var(--yellow);
+    color: var(--darkerGrey);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.player-card__link:hover {
+    opacity: 0.85;
+}
+
+/* ── PLAYER PROFILE PAGE ────────────────────────────── */
+.player-profile {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.player-profile__card {
+    background-color: var(--darkerGrey);
+    border-radius: 12px;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.player-profile__avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--yellow);
+    flex-shrink: 0;
+}
+
+.player-profile__nickname {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.3rem;
+}
+
+.player-profile__team {
+    color: var(--yellow);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+.player-profile__bio {
+    color: var(--grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ── TEAMMATES ──────────────────────────────────────── */
+.player-teammates__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
