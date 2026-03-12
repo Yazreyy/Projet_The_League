@@ -9,6 +9,7 @@ require_once './Controller/AbstractController.php';
 require_once './Controller/HomeController.php';
 require_once './Controller/TeamController.php';
 require_once './Controller/PlayerController.php';
+require_once './Controller/GameController.php';
 
 require_once './models/Team.php';
 require_once './services/Router.php';

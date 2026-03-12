@@ -1,0 +1,32 @@
+<section class="match-page">
+    <h1 class="match-page__title"><?= $game->getName() ?></h1>
+    <p class="match-page__date"><?= $game->getDate() ?></p>
+    <div class="match-page__logos">
+        <img src="<?= $game->getLogo_1() ?>" alt="<?= $game->getTeam_1() ?>">
+        <span class="match-page__vs">VS</span>
+        <img src="<?= $game->getLogo_2() ?>" alt="<?= $game->getTeam_2() ?>">
+    </div>
+    <div class="match-page__performances">
+        <h2>Les Performances</h2>
+        <table class="performances-table">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                    <th>Assists</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($performances as $perf) : ?>
+                    <tr>
+                        <td><?= $perf['nickname'] ?></td>
+                        <td><?= $perf['team_name'] ?></td>
+                        <td><?= $perf['points'] ?></td>
+                        <td><?= $perf['assists'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</section>

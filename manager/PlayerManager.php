@@ -37,6 +37,17 @@ public function findAll() : array
         return $player;
     }
 
+    public function findPerformancesByGame(int $gameId) : array {
+        $query = $this->db->prepare('SELECT players.nickname, teams.name AS team_name, pp.points, pp.assists
+            FROM player_performance pp
+            JOIN players ON pp.player = players.id
+            JOIN teams ON players.team = teams.id
+            WHERE pp.game = :gameId
+            ORDER BY pp.points DESC');
+        $query->execute(['gameId' => $gameId]);
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function findByTeam($teamId) : array {
         $query = $this->db->prepare('SELECT players.*, media.url AS portrait, teams.name AS numberTeam, players.team AS teamId FROM players JOIN media ON players.portrait = media.id
         JOIN teams ON players.team = teams.id WHERE players.team = :teamId');

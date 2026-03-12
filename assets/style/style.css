@@ -60,6 +60,7 @@ h2 {
     color: var(--yellow);
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .site-header__nav ul {
@@ -293,6 +294,318 @@ h2 {
 
 .player-card__link:hover {
     opacity: 0.85;
+}
+
+/* ── MATCHS PAGE ────────────────────────────────────── */
+.matchs-page {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.matchs-page__title {
+    color: var(--yellow);
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+.match-card {
+    background-color: var(--darkerGrey);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.match-card__title {
+    color: var(--pink);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.4rem;
+}
+
+.match-card__date {
+    color: var(--grey);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.match-card__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.match-card__logos img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+.match-card__vs {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.match-card__link {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    background-color: transparent;
+    color: var(--yellow);
+    text-decoration: none;
+    border: 1px solid var(--yellow);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.match-card__link:hover {
+    background-color: var(--yellow);
+    color: var(--darkerGrey);
+}
+
+/* ── MATCH DETAIL PAGE ──────────────────────────────── */
+.match-page {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.match-page__title {
+    color: var(--pink);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.match-page__date {
+    color: var(--grey);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.match-page__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.match-page__logos img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+.match-page__vs {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.match-page__winner {
+    color: var(--grey);
+    font-size: 1rem;
+}
+
+.match-page__winner strong {
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
+.match-page__performances {
+    margin-top: 3rem;
+}
+
+.match-page__performances h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.performances-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.performances-table th {
+    background-color: var(--darkerGrey);
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.performances-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: white;
+}
+
+.performances-table tr:hover td {
+    background-color: rgba(255,255,255,0.04);
+}
+
+.performances-table td:first-child {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+/* ── TEAMS PAGE ─────────────────────────────────────── */
+.teams-page {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.teams-page__title {
+    color: var(--yellow);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background-color: var(--darkerGrey);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.team-card__name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.team-card__description {
+    color: var(--grey);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.team-card__link {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.35rem 1rem;
+    background-color: transparent;
+    color: var(--yellow);
+    text-decoration: none;
+    border: 1px solid var(--yellow);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.team-card__link:hover {
+    background-color: var(--yellow);
+    color: var(--darkerGrey);
+}
+
+/* ── TEAM DETAIL PAGE ───────────────────────────────── */
+.team-page {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.team-page__title {
+    color: var(--pink);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.team-page__players {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.team-page__players .player-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.team-page__players .player-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--pink);
+    margin-bottom: 0.4rem;
+}
+
+.team-page__players .player-card__nickname {
+    color: var(--pink);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 /* ── PLAYER PROFILE PAGE ────────────────────────────── */

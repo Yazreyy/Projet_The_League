@@ -1,0 +1,13 @@
+<section class="teams-page">
+    <h1 class="teams-page__title">Les Teams de la League</h1>
+    <div class="teams-grid">
+        <?php foreach($teams as $team) : ?>
+            <div class="team-card">
+                <img src="<?= $team->getLogo() ?>" alt="<?= $team->getName() ?>">
+                <p class="team-card__name"><?= $team->getName() ?></p>
+                <p class="team-card__description"><?= $team->getDescription() ?></p>
+                <a class="team-card__link" href="index.php?route=teams&id=<?= $team->getId() ?>">Découvrez <?= $team->getName() ?></a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>

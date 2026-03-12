@@ -1,0 +1,12 @@
+<section class="team-page">
+    <h1 class="team-page__title"><?= $teams->getName() ?></h1>
+    <div class="team-page__players">
+        <?php foreach($players as $player) : ?>
+            <div class="player-card">
+                <img src="<?= $player->getPortrait() ?>" alt="<?= $player->getNickname() ?>">
+                <p class="player-card__nickname"><?= $player->getNickname() ?></p>
+                <a class="player-card__link" href="index.php?route=player&id=<?= $player->getId() ?>">Découvrez <?= $player->getNickname() ?></a>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>

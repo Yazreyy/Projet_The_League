@@ -1,0 +1,15 @@
+<section class="matchs-page">
+    <h1 class="matchs-page__title">Les Matchs</h1>
+    <?php foreach($games as $game) : ?>
+        <div class="match-card">
+            <h2 class="match-card__title"><?= $game->getName() ?></h2>
+            <p class="match-card__date"><?= $game->getDate() ?></p>
+            <div class="match-card__logos">
+                <img src="<?= $game->getLogo_1() ?>" alt="<?= $game->getTeam_1() ?>">
+                <span class="match-card__vs">VS</span>
+                <img src="<?= $game->getLogo_2() ?>" alt="<?= $game->getTeam_2() ?>">
+            </div>
+            <a class="match-card__link" href="index.php?route=matchs&id=<?= $game->getId() ?>">En voir davantage</a>
+        </div>
+    <?php endforeach; ?>
+</section>

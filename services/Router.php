@@ -8,14 +8,25 @@ class Router
             if ($_GET["route"] === "home") {
                 $ctrl = new HomeController();
                 $ctrl->index();
-            	} elseif($_GET['route'] === 'team') {
+            	} elseif($_GET['route'] === 'teams') {
                 $ctrl = new TeamController();
-                $ctrl->show();
+                if(isset($_GET['id'])) {
+                    $ctrl->show();
+                } else {
+                    $ctrl->index();
+                }
             	} elseif($_GET['route'] === 'player'){
                     $ctrl = new PlayerController();
                     if(isset($_GET['id'])) {
                     $ctrl->show();
                 	} else {
+                    $ctrl->index();
+                }
+                } elseif($_GET['route'] === 'matchs') {
+                $ctrl = new GameController();
+                if(isset($_GET['id'])) {
+                    $ctrl->show();
+                } else {
                     $ctrl->index();
                 }
                 } else {
