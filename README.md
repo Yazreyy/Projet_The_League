@@ -5,10 +5,17 @@ A sports league website built with PHP following the MVC architecture pattern, f
 ##  Screenshots
 
 ### Homepage
-<img width="1290" height="930" alt="projet-recette" src="https://github.com/user-attachments/assets/fe28f768-9722-455a-9131-26ddf811e3a5" />
+<img width="1892" height="931" alt="Image" src="https://github.com/user-attachments/assets/1e6d8229-825e-43e6-9536-31b6a5a88815" />
 
-### Recipe Detail
-<img width="865" height="918" alt="detail-recette" src="https://github.com/user-attachments/assets/3dc32a35-6da4-4bc5-bef5-0f7679eac929" />
+### Players
+
+<img width="1905" height="901" alt="Image" src="https://github.com/user-attachments/assets/166dd2a8-a547-4520-aeb7-410324bb38ff" />
+
+### Matchs
+
+<img width="1909" height="888" alt="Image" src="https://github.com/user-attachments/assets/b62ba41b-9068-4626-84d3-c3a54ffadcf9" />
+
+
 
 ##  Features
 
